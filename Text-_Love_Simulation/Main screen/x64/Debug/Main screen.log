@@ -1,4 +1,4 @@
 ﻿  main.c
-C:\Users\Administrator\Desktop\Text-_Love_Simulation\Text-_Love_Simulation\Main screen\main.c(283,2): warning C4098: 'main': 'void' 함수에서 값을 반환하고 있습니다.
-C:\Users\Administrator\Desktop\Text-_Love_Simulation\Text-_Love_Simulation\Main screen\main.c(55,21): warning C4101: 'g' :참조되지 않은 지역 변수입니다.
+C:\Users\Administrator\Desktop\Text-_Love_Simulation\Text-_Love_Simulation\Main screen\main.c(317,2): warning C4098: 'main': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\Administrator\Desktop\Text-_Love_Simulation\Text-_Love_Simulation\Main screen\main.c(65,21): warning C4101: 'g' :참조되지 않은 지역 변수입니다.
   Main screen.vcxproj -> C:\Users\Administrator\Desktop\Text-_Love_Simulation\Text-_Love_Simulation\x64\Debug\Main screen.exe
