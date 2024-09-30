@@ -6,6 +6,8 @@
 #define Time 2000
 #define SIZE 100000
 
+#define Image 100000 //파일 크기
+
 
 void gotoxy(int x, int y); //커서 옮기기 미리 선언 
 
@@ -42,8 +44,39 @@ void setColor(unsigned short text) {
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), text);
 }
 
+
 void main(void)
 {
+#pragma region 파일 입출력
+
+#pragma region 파일 쓰기 
+	////첫 번째 매개변수 (파일의 이름)
+	////두 번째 매개변수 (파일의 입출력 모드)
+	//FILE* file = fopen("data.txt", "w");
+	//
+	//fputs("Character Information", file);
+	//
+	//fclose(file);
+
+#pragma region 파일 읽기
+	FILE* file = fopen("main.txt","r");
+
+	char buffer[Image] = { 0, };
+	//첫 번째 매개변수 : 읽은 데이터를 저장하 메모리 버퍼의 포인터 변수
+	//두 번째 매개변수 : 각 데이터 항목의 크기
+	//세 번째 매개변수 : 데이터를 읽어올 데이터 항목의 수
+	//네 변째 매개변수 : 데이터를 읽어올 파일의 포인터 변수
+
+	fread(buffer,1, Image, file);
+	printf("%s", buffer); 
+	fclose(file);
+
+#pragma endregion
+
+#pragma endregion 
+
+
+
 
 	SetConsoleTitle(TEXT("Text_Love_Simulation_정민정 제작"));
 	setColor(VIOLET);
