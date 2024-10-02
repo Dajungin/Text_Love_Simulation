@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include <windows.h>
 #include <stdlib.h>
-#include "Talk.h"
 #define Time 2000
 #define SIZE 100000
 
-#define Image 100000 //파일 크기
+#define Image 10000
+//파일 크기
 
 
 void gotoxy(int x, int y); //커서 옮기기 미리 선언 
@@ -45,7 +45,7 @@ void setColor(unsigned short text) {
 }
 
 
-void main(void)
+void main()
 {
 #pragma region 파일 입출력
 
@@ -59,17 +59,17 @@ void main(void)
 	//fclose(file);
 
 #pragma region 파일 읽기
-	FILE* file = fopen("main.txt","r");
-
-	char buffer[Image] = { 0, };
-	//첫 번째 매개변수 : 읽은 데이터를 저장하 메모리 버퍼의 포인터 변수
-	//두 번째 매개변수 : 각 데이터 항목의 크기
-	//세 번째 매개변수 : 데이터를 읽어올 데이터 항목의 수
-	//네 변째 매개변수 : 데이터를 읽어올 파일의 포인터 변수
-
-	fread(buffer,1, Image, file);
-	printf("%s", buffer); 
-	fclose(file);
+	//FILE* file = fopen("main.txt","r");
+	//
+	//char buffer[Image] = { 0, };
+	////첫 번째 매개변수 : 읽은 데이터를 저장하 메모리 버퍼의 포인터 변수
+	////두 번째 매개변수 : 각 데이터 항목의 크기
+	////세 번째 매개변수 : 데이터를 읽어올 데이터 항목의 수
+	////네 변째 매개변수 : 데이터를 읽어올 파일의 포인터 변수
+	//
+	//fread(buffer,1, Image, file);
+	//printf("%s", buffer); 
+	//fclose(file);
 
 #pragma endregion
 
@@ -132,11 +132,19 @@ void main(void)
 		clearConsole();
 		printf("\n[새로운 학교, 새로운 반.. 새로운 친구들.. 그리고 그렇게 정해진 나의 짝은.. 아까 부딪쳤던 그녀였다.]\n\n");
 		printf("안녕 잘 부탁해. 혹시 이름이 어떻게 돼?\n");
+
 		printf("??? : 너가 알아서 뭐하게?... 그리고 이건 물어보는 쪽이 먼저 이름을 말해야 하는거 아니야?\n");
 		printf("플레이 이름을 입력해주세요: ");
 		char name[20];
 		scanf("%s", &name);
 		printf("미안 내 이름은 %s이야.\n", name);
+
+		FILE* file = fopen("base.txt", "r");
+		char buffer[Image] = { 0, };
+		fread(buffer, 1, Image, file);
+		printf("%s", buffer);
+		fclose(file);
+
 		printf("아이리: ...아이리야\n");
 
 		//#짝궁
@@ -204,29 +212,106 @@ void main(void)
 		{
 		case 1:
 			if (love >= 35)
+			{
+				FILE* file = fopen("shy.txt", "r");
+				char buffer[Image] = { 0, };
+				fread(buffer, 1, Image, file);
+				printf("%s", buffer);
+				fclose(file);
+
 				printf("아이리: (작게 웃으며) 진짜로? 그럼… 조금 기대해볼게. 너무 부담은 주지 마.\n");
+		
+			}
 			else if (love >= 15)
+			{
+				FILE* file = fopen("smile.txt", "r");
+				char buffer[Image] = { 0, };
+				fread(buffer, 1, Image, file);
+				printf("%s", buffer);
+				fclose(file);
+
 				printf("아이리: 뭐, 기대는 안 하지만… 네가 그렇게 말하니 한 번 믿어볼게.\n");
+			}
+				
 			else
+			{
+				FILE* file = fopen("base.txt", "r");
+				char buffer[Image] = { 0, };
+				fread(buffer, 1, Image, file);
+				printf("%s", buffer);
+				fclose(file);
+
 				printf("아이리: 흥, 굳이 네가 챙겨줄 거 없어. 나 혼자서도 충분하니까.\n");
+			}
+				
 			love += 20;
 			break;
 		case 2:
 			if (love >= 35)
+			{
+				FILE* file = fopen("smile.txt", "r");
+				char buffer[Image] = { 0, };
+				fread(buffer, 1, Image, file);
+				printf("%s", buffer);
+				fclose(file);
+
 				printf("아이리: (작게 웃음) 그럼, 형식적이라도… 괜찮아. 너무 무리하지 않아도 돼.\n");
+			}
+				
 			else if (love >= 15)
+			{
+				FILE* file = fopen("base.txt", "r");
+				char buffer[Image] = { 0, };
+				fread(buffer, 1, Image, file);
+				printf("%s", buffer);
+				fclose(file);
+
 				printf("아이리: 그래, 너무 부담 주지 않는 게 좋겠지. 알아서 해.\n");
+			}
+			
 			else
+			{
+				FILE* file = fopen("omo.txt", "r");
+				char buffer[Image] = { 0, };
+				fread(buffer, 1, Image, file);
+				printf("%s", buffer);
+				fclose(file);
 				printf("아이리: 형식적? 차라리 아무것도 하지 않는 게 나을 것 같은데.\n");
+			}
+				
 			love += 0;
 			break;
 		case 3:
 			if (love >= 35)
+			{
+				FILE* file = fopen("shy.txt", "r");
+				char buffer[Image] = { 0, };
+				fread(buffer, 1, Image, file);
+				printf("%s", buffer);
+				fclose(file);
 				printf("아이리: 필요 없진 않아… 그래도 네가 챙겨준다면 그건 좀 특별할지도 몰라.\n");
+			}
+				
 			else if (love >= 15)
+			{
+				FILE* file = fopen("base.txt", "r");
+				char buffer[Image] = { 0, };
+				fread(buffer, 1, Image, file);
+				printf("%s", buffer);
+				fclose(file);
 				printf("아이리: 필요 없다니… 뭐, 그렇게 생각할 수도 있겠지만. 그래도, 네가 할 거면 하든가.\n");
+			}
+				
 			else
+			{
+				FILE* file = fopen("sad.txt", "r");
+				char buffer[Image] = { 0, };
+				fread(buffer, 1, Image, file);
+				printf("%s", buffer);
+				fclose(file);
 				printf("아이리: 당연하지. 난 이런 게임 따위에 신경 안 써. 그러니 아예 하지 마.\n");
+			}
+				
 			love -= 10;
 			break;
 		default:
@@ -270,29 +355,102 @@ void main(void)
 		{
 		case 1:
 			if (love >= 60)
+			{
+				FILE* file = fopen("shy.txt", "r");
+				char buffer[Image] = { 0, };
+				fread(buffer, 1, Image, file);
+				printf("%s", buffer);
+				fclose(file);
 				printf("아이리: (살짝 붉어진 얼굴로) 손? …뭐, 잡아도 괜찮아. 그치만, 너무 꽉 잡으면 안 돼.\n");
+			}
+				
 			else if (love >= 45)
+			{
+				FILE* file = fopen("smile.txt", "r");
+				char buffer[Image] = { 0, };
+				fread(buffer, 1, Image, file);
+				printf("%s", buffer);
+				fclose(file);
 				printf("아이리: 손을 잡다니… 진짜 겁쟁이네. 그래도 뭐… 잡아도 괜찮아.\n");
+			}
+				
 			else
+			{
+				FILE* file = fopen("sad.txt", "r");
+				char buffer[Image] = { 0, };
+				fread(buffer, 1, Image, file);
+				printf("%s", buffer);
+				fclose(file);
+
 				printf("아이리: 손? 농담이지? 그런 거 필요 없어. 난 무섭지도 않고\n");
+			}
+				
 			love += 20;
 			break;
 		case 2:
 			if (love >= 60)
+			{
+				FILE* file = fopen("shy.txt", "r");
+				char buffer[Image] = { 0, };
+				fread(buffer, 1, Image, file);
+				printf("%s", buffer);
+				fclose(file);
 				printf("아이리: (작게) 겁… 조금 나긴 해. 하지만 너랑 같이 있으니까 괜찮아.\n");
+			}
+				
 			else if (love >= 45)
+			{
+				FILE* file = fopen("base.txt", "r");
+				char buffer[Image] = { 0, };
+				fread(buffer, 1, Image, file);
+				printf("%s", buffer);
+				fclose(file);
 				printf("아이리: 겁먹을 리 없잖아. 그치만… 네가 그렇게 말하니 이상하게 긴장되네.\n");
+			}
+				
 			else
+			{
+				FILE* file = fopen("sad.txt", "r");
+				char buffer[Image] = { 0, };
+				fread(buffer, 1, Image, file);
+				printf("%s", buffer);
+				fclose(file);
 				printf("아이리: 무섭다고? 웃기지 마. 난 겁 같은 거 안 먹어.\n");
+			}
+				
 			love -= 10;
 			break;
 		case 3:
 			if (love >= 60)
+			{
+				FILE* file = fopen("smile.txt", "r");
+				char buffer[Image] = { 0, };
+				fread(buffer, 1, Image, file);
+				printf("%s", buffer);
+				fclose(file);
 				printf("아이리: (작게 웃으며) 앞서 가도 괜찮아. 그래도 가끔은 뒤도 돌아봐 줘. 혼자 있으면 좀… 무섭단 말이야.\n");
+			}
+				
 			else if (love >= 45)
+			{
+				FILE* file = fopen("base.txt", "r");
+				char buffer[Image] = { 0, };
+				fread(buffer, 1, Image, file);
+				printf("%s", buffer);
+				fclose(file);
 				printf("아이리: 앞서 걷는다니… 그래, 마음대로 해. 하지만 난 네가 필요 없으니까.\n");
+			}
+				
 			else
+			{
+				FILE* file = fopen("omo.txt", "r");
+				char buffer[Image] = { 0, };
+				fread(buffer, 1, Image, file);
+				printf("%s", buffer);
+				fclose(file);
 				printf("아이리: 네가 앞서든 뒤에 있든, 난 상관 없어. 그냥 빨리 끝내자.\n");
+			}
+				
 			love += 10;
 			break;
 		default:
@@ -359,6 +517,7 @@ void main(void)
 
 	
 }
+
 
 void gotoxy(int x, int y) //커서 옮기기 
 { 
