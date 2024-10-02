@@ -5,12 +5,7 @@
 #define Time 2000
 #define SIZE 100000
 
-#define Image 10000
-//파일 크기
-
-
-
-
+#define Image 10000 //이미지 파일 크기
 
 
 void gotoxy(int x, int y); //커서 옮기기 미리 선언 
@@ -79,10 +74,10 @@ void main()
 
 #pragma endregion 
 
-	system("mode con: cols=70 lines=30"); //cols==가로 , lines==세로
+	system("mode con: cols=70 lines=30"); //cols==가로 , lines==세로 //콘솔창 크기 변경
 
 
-	SetConsoleTitle(TEXT("Text_Love_Simulation_정민정 제작"));
+	SetConsoleTitle(TEXT("Text_Love_Simulation_정민정 제작")); //콘솔창 이름 변경
 	setColor(VIOLET);
 
 	printf("텍스트 미연시 게임\n");
