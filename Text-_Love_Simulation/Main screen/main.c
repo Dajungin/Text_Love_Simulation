@@ -501,7 +501,7 @@ void main()
 		}
 
 
-		return 0;
+		
 		
 	}
 	else if (answer ==2)
@@ -513,7 +513,7 @@ void main()
 	{
 		printf("잘 못 입력하셨습니다 \n다시 시도해주세요");
 	}
-
+	return 0;
 	
 }
 
