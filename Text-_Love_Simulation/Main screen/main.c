@@ -122,6 +122,7 @@ void main()
 			love += 10;
 			break;
 		default:
+			printf("번호를 잘 못 입력하셨습니다. 호감도 +0\n");
 			break;
 		}
 
@@ -169,6 +170,7 @@ void main()
 			love -= 10;
 			break;
 		default:
+			printf("번호를 잘 못 입력하셨습니다. 호감도 +0\n");
 			break;
 		}
 
@@ -195,6 +197,7 @@ void main()
 			love -= 5;
 			break;
 		default:
+			printf("번호를 잘 못 입력하셨습니다. 호감도 +0\n");
 			break;
 		}
 
@@ -314,6 +317,7 @@ void main()
 			love -= 10;
 			break;
 		default:
+			printf("번호를 잘 못 입력하셨습니다. 호감도 +0\n");
 			break;
 		}
 
@@ -340,6 +344,7 @@ void main()
 			love -= 5;
 			break;
 		default:
+			printf("번호를 잘 못 입력하셨습니다. 호감도 +0\n");
 			break;
 		}
 
@@ -453,6 +458,7 @@ void main()
 			love += 10;
 			break;
 		default:
+			printf("번호를 잘 못 입력하셨습니다. 호감도 +0\n");
 			break;
 		}
 

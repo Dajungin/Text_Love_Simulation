@@ -1,5 +1,5 @@
 ﻿  main.c
-C:\Users\Administrator\Desktop\Text-_Love_Simulation\Text-_Love_Simulation\Main screen\main.c(516,2): warning C4098: 'main': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\Administrator\Desktop\Text-_Love_Simulation\Text-_Love_Simulation\Main screen\main.c(522,2): warning C4098: 'main': 'void' 함수에서 값을 반환하고 있습니다.
   코드를 생성하고 있습니다.
   1 of 11 functions ( 9.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
